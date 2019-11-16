@@ -1,9 +1,9 @@
 # ESPHome-RGB-Breathing-Light-Effect
 
-Simply add the code in effect.txt to your effects section of the light in your esphome configuration file of your node.
+Simply add the code in effect.txt to your effects section of the light in your esphome configuration file of your node and insert the correct id. For finetuning the effect to your liking, refer to the comment in the code.
 
-It works by cycling from allmost off (to prevent displaying a false-positive off state in HA) to full brightness and back to allmost off
-and than to the next color and starting all over again.
+The breathing works by setting a long transition time and switching between 1% and 100% brightness, this prevents in HA the
+displaying a false-positive offtime especially in the logs.
+The rgb breathing extends this by setting a new color from a defined list when the brightness is low.
 
-By changing the update_interval in the effect and the transition_length inside the lambda you can tune the speed of the breathing to your
-liking, but i´ve chosen these values to display a smooth breathing with my NeoPixelBus Light.
+
