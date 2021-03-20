@@ -81,7 +81,7 @@
              state = 0;
              }
              color++;
-             if(color == 7)
+             if(color == 13)
              {
                color = 1;
              }
